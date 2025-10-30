@@ -1,5 +1,3 @@
-Here's your README in a **well-structured, step-by-step, "down" approach** and with all commands in clearly separated code blocks so users can copy-paste each step directly:
-
 ***
 
 # 🚀 learning-to-rank-search
@@ -120,4 +118,3 @@ Individual Fold Results:
 
 ***
 
-**Copy-paste this into your README.md! If you want even more detail or improved formatting, just provide the next section and I’ll organize or restyle it for you.**

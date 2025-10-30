@@ -35,62 +35,51 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-Running the Pipeline
-1.Train and evaluate the model:
+Running the Pipeline:
+
+  1.Train and evaluate the model:
 ```bash
 python -m scripts.run_pipeline
 ```
 Produces NDCG scores for each fold.
 
-2.Save your model for the demo:
+  2.Save your model for the demo:
 
 Model is saved as model_fold1.pkl after running training.
 
 Interactive Demo with Streamlit
-1.Run the Streamlit demo UI:
+  1.Run the Streamlit demo UI:
 ```bash
 streamlit run demo_streamlit.py
 ```
-2.Enter paths for a test file and a trained model.
-3.Select a query ID to view ranked documents for that search.
+  2.Enter paths for a test file and a trained model.
+  3.Select a query ID to view ranked documents for that search.
 
 
 Approach
-Dataset: LETOR MQ2008 (benchmark for ranking tasks)
-
-Algorithm: LightGBM LambdaRank (optimized for NDCG)
-
-Evaluation Metric: NDCG (Normalized Discounted Cumulative Gain)
-
-Cross-Validation: 5-fold
+->Dataset: LETOR MQ2008 (benchmark for ranking tasks)
+->Algorithm: LightGBM LambdaRank (optimized for NDCG)
+->Evaluation Metric: NDCG (Normalized Discounted Cumulative Gain)
+->Cross-Validation: 5-fold
 
 
 Results
-Average Test NDCG: e.g., 0.5340
+->Average Test NDCG: e.g., 0.5340
+->Individual Fold Results:
 
-Individual Fold Results:
-
-Fold1: 0.4878
-
-Fold2: 0.5081
-
-Fold3: 0.5260
-
-Fold4: 0.5775
-
-Fold5: 0.5705
+  ->Fold1: 0.4878
+  ->Fold2: 0.5081
+  ->Fold3: 0.5260
+  ->Fold4: 0.5775
+  ->Fold5: 0.5705
 
 
 How It Works
-Model learns to assign higher scores to documents more relevant to a query.
-
-Evaluated using NDCG—top results are most useful to users.
-
-UI lets users select a query and see model rankings live.
+  ->Model learns to assign higher scores to documents more relevant to a query.
+  ->Evaluated using NDCG—top results are most useful to users.
+  ->UI lets users select a query and see model rankings live.
 
 References
-LETOR Dataset
-
-LightGBM Documentation
-
-Streamlit Documentation
+  ->LETOR Dataset
+  ->LightGBM Documentation
+  ->Streamlit Documentation

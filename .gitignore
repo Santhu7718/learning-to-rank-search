@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pkl
+*.txt
+*.csv
+*.log
+.DS_Store
+*.png
+dataset/

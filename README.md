@@ -56,14 +56,16 @@ streamlit run demo_streamlit.py
   3.Select a query ID to view ranked documents for that search.
 
 
-Approach
+Approach:
+
 ->Dataset: LETOR MQ2008 (benchmark for ranking tasks)
 ->Algorithm: LightGBM LambdaRank (optimized for NDCG)
 ->Evaluation Metric: NDCG (Normalized Discounted Cumulative Gain)
 ->Cross-Validation: 5-fold
 
 
-Results
+Results:
+
 ->Average Test NDCG: e.g., 0.5340
 ->Individual Fold Results:
 
@@ -74,12 +76,14 @@ Results
   ->Fold5: 0.5705
 
 
-How It Works
+How It Works:
+
   ->Model learns to assign higher scores to documents more relevant to a query.
   ->Evaluated using NDCG—top results are most useful to users.
   ->UI lets users select a query and see model rankings live.
 
-References
+References:
+
   ->LETOR Dataset
   ->LightGBM Documentation
   ->Streamlit Documentation
